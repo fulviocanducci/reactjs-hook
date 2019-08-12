@@ -10,7 +10,7 @@ export default function Nav() {
     ];
     return (
         <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">            
-            <Link to="/about" className="navbar-brand">Top navbar</Link>
+            <Link to="/" className="navbar-brand">Top navbar</Link>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
             </button>

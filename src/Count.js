@@ -6,7 +6,7 @@ export default function Count (){
     return (        
         <Main title="Counter">
             <>
-                <div className="text-center">
+                <div className="text-center mt-2">
                     <h3>{number}</h3>
                 </div>
                 <div className="mt-2">

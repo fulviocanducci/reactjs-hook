@@ -7,7 +7,7 @@ export default function Todos () {
     const [todo, setTodo] = useState('');
 
     function handlerAdd() {
-        if (todo && todo !== '') {
+        if (todo && todo !== '' && todo.trim() !== '') {
             setTodos([...todos, {name: todo}]);
             setTodo('');
             return true;
