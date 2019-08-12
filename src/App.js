@@ -1,38 +1,23 @@
-import React, { useState, useEffect  } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-function App() {
+import Home from './Home';
+import About from './About';
+import Count from './Count';
+import Todos from './Todos';
+import Nav from './Nav';
 
-  const [count, setCount] = useState(0);
-  const [list, setList] = useState([]);
-  const [name, setName] = useState('');
-
-  useEffect(() => {
-    document.title = list.length;
-  }, [count, list]);
-
-  function handleKeyPress (event) {    
-    if(event.key === 'Enter') {
-      setList([...list, {name: name}]);
-      setName('');
-    }
-  }
+function App() {  
 
   return (
     <>
-      <div className="App">
-        {count} <button onClick={() => setCount(count + 1)}>Adicionar</button>
-      </div>
-      <div>
-        {
-          list.map((item,i) => (
-            <li key={i}>{item.name}</li>
-          ))
-        }
-      </div>
-      <div>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} onKeyPress={handleKeyPress} /> 
-        <button onClick={() => setList([...list, {name: name}])}>Add</button>
-      </div>
+      <Router>
+        <Nav></Nav>              
+        <Route exact path="/" component={Home} />
+        <Route exact path="/counter" component={Count} />
+        <Route exact path="/todos" component={Todos} />
+        <Route path="/about" component={About} />
+      </Router>
     </>
   );
 }
