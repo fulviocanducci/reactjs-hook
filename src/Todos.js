@@ -37,6 +37,7 @@ export default function Todos () {
                     <div className="row">
                         <div className="col-md-6 mt-3">
                             <input type="text" 
+                                placeholder= "Enter the event"
                                 className="form-control" 
                                 onKeyPress={handlerKeyPress} 
                                 value={todo} 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Main from './Main';
 
-export default function Count (){
+export default function Count () {
     const [number, setNumber] = useState(0);
     return (        
         <Main title="Counter">
